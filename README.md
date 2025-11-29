@@ -1,19 +1,32 @@
-A simple command line application to track basketball player statistics and calculate per-game averages.
+Basketball Stats Tracker
 
-This demonstrates Python concepts such as data structures, loops, user input, and basic computation.
+This program lets you enter basketball stats for players and shows their average points, rebounds, and assists.
 
-Each player name is a key in the dictionary, and the value is another dictionary holding their stat categories.
+What it does:
 
-Why this works:
+You type in a player's name and their game stats.
 
-Each stat category stores a list of numbers.
+The program saves the stats.
 
-Every game result adds another value to the list.
+You can later select a player and see their average stats per game.
 
-Averages are calculated using:
+How it works:
 
-Sum of the list
+The program uses a dictionary to store players.
+Each player’s name is a key, and their stats are saved in lists:
 
-Divided by number of games (length of the list)
+players = {
+    "Jordan": {"points": [], "rebounds": [], "assists": []}
+}
 
-This allows multiple games per player without overwriting previous results.
+
+Every time you add a game, the numbers get added to these lists.
+Averages are calculated using sum / number of games.
+
+How to run:
+
+Run it in a terminal:
+
+python basketball_stats.py
+
+Use the menu to add stats or show player averages.
